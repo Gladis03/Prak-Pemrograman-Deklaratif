@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Diri</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fbd9e5;
+      text-align: center;
+      padding-top: 40px;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+    }
+    .biodata {
+      background: #c43670;
+      border-radius: 15px;
+      width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    h2 {
+      color: #2B1A12;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    a {
+      color: #2B1A12;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin: 10px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Selamat Datang di Profil Saya 🌸🌸🌸</h2>
+  <img id="avatar" src="" alt="Avatar">
+
+  <p>Ini adalah bioadata saya ^^</p>
+  
+  <div class="biodata">
+    <p><strong>Nama Lengkap:</strong> <span id="nama"></span></p>
+    <p><strong>Program Studi:</strong> Informatika</p>
+    <p><strong>Semester:</strong> 7</p>
+    <p><strong>Hobi:</strong></p>
+    <ul>
+      <li>Main Roblox</li>
+      <li>Menonton Windah Basudara</li>
+      <li>Travelling</li>
+    </ul>
+  </div>
+
+  <a href="https://www.instagram.com/gexsgy_kr?igsh=cjBkdnprY2c0d3Np&utm_source=qr">URL Instagram</a>
+
+  <script>
+    // Ambil nama dari localStorage atau gunakan default
+    const username = localStorage.getItem("username") || "Gladis Serren Kutani";
+    document.getElementById("nama").innerText = username;
+
+    // Gunakan API dicebear untuk membuat avatar berdasarkan nama
+    document.getElementById("avatar").src = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2X6RyZ-b_TwHgldjEpX8qtt7TBQCeFtCQ-qloHQS96g&s${username}`;
+  </script>
+</body>
+</html>
